@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center_vertical"
+        tools:layout_editor_absoluteX="165dp"
+        tools:layout_editor_absoluteY="160dp">
+
+        <TextView
+            android:id="@+id/urlPathTV"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="URL Path" />
+
+        <EditText
+            android:id="@+id/uriET"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="textUri"
+            android:layout_marginBottom="16dp"
+            android:textAlignment="center"
+            android:text="192.168.0.46:3000" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Enable HTTPS"
+            />
+        <Switch
+            android:id="@+id/httpProtocolSW"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:checked="true"
+            android:layout_marginBottom="16dp"/>
+        <Button
+            android:id="@+id/openWebviewBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="Open WebView"
+            android:onClick="openWebviewClickHandler"/>
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
